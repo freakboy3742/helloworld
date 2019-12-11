@@ -8,7 +8,7 @@ on:
 #       - master
 
 jobs:
-  linux-build:
+  linux:
     name: Linux build
     runs-on: ubuntu-latest
 
@@ -20,8 +20,8 @@ jobs:
         python-version: 3.8
     - name: Install OS dependencies
       run: |
-        apt-get update -y
-        apt-get install -y python3-dev libgirepository1.0-dev libcairo2-dev libpango1.0-dev libwebkitgtk-3.0-0 gir1.2-webkit-3.0
+        sudo apt-get update -y
+        sudo apt-get install -y python3-dev libgirepository1.0-dev libcairo2-dev libpango1.0-dev libwebkitgtk-3.0-0 gir1.2-webkit-3.0
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip setuptools
@@ -30,7 +30,7 @@ jobs:
       run: |
         briefcase build
 
-  macOS-build:
+  macOS:
     name: macOS build
     runs-on: macOS-latest
 
@@ -48,7 +48,7 @@ jobs:
       run: |
         briefcase build macOS dmg
 
-  windows-build:
+  windows:
     name: Windows build
     runs-on: windows-latest
 
@@ -66,7 +66,7 @@ jobs:
       run: |
         briefcase build
 
-  iOS-build:
+  iOS:
     name: iOS build
     runs-on: macOS-latest
 
