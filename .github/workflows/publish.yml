@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip setuptools
-        python -m pip install git@https://github.com/beeware/briefcase.git@v0.3#egg=briefcase
+        python -m pip install git+https://github.com/beeware/briefcase.git@v0.3#egg=briefcase
     - name: Build installer
       run: |
         briefcase build
@@ -39,7 +39,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip setuptools
-        python -m pip install git@https://github.com/beeware/briefcase.git@v0.3#egg=briefcase
+        python -m pip install git+https://github.com/beeware/briefcase.git@v0.3#egg=briefcase
     - name: Build installer
       run: |
         briefcase build dmg
@@ -57,7 +57,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip setuptools
-        python -m pip install git@https://github.com/beeware/briefcase.git@v0.3#egg=briefcase
+        python -m pip install git+https://github.com/beeware/briefcase.git@v0.3#egg=briefcase
     - name: Build installer
       run: |
         briefcase build
@@ -75,7 +75,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip setuptools
-        python -m pip install git@https://github.com/beeware/briefcase.git@v0.3#egg=briefcase
+        python -m pip install git+https://github.com/beeware/briefcase.git@v0.3#egg=briefcase
     - name: Build installer
       run: |
         briefcase build
