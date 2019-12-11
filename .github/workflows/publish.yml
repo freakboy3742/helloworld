@@ -8,7 +8,7 @@ on:
 #       - master
 
 jobs:
-  build:
+  linux-build:
     name: Linux build
     runs-on: ubuntu-latest
 
@@ -26,7 +26,7 @@ jobs:
       run: |
         briefcase build
 
-  build:
+  macOS-build:
     name: macOS build
     runs-on: macOS-latest
 
@@ -44,7 +44,7 @@ jobs:
       run: |
         briefcase build dmg
 
-  build:
+  windows-build:
     name: Windows build
     runs-on: windows-latest
 
@@ -62,7 +62,7 @@ jobs:
       run: |
         briefcase build
 
-  build:
+  iOS-build:
     name: iOS build
     runs-on: macOS-latest
 
