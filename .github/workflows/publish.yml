@@ -85,4 +85,4 @@ jobs:
         python -m pip install git+https://github.com/beeware/briefcase.git@v0.3#egg=briefcase
     - name: Build installer
       run: |
-        briefcase build iOS
+        briefcase build iOS -d "iPhone 11"
